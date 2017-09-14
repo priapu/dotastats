@@ -11,12 +11,18 @@ export class HeroesListComponent implements OnInit {
   constructor(private OpendotaService: OpendotaService) { }
 
   heroes = []
+  loaded = false
 
   ngOnInit() {
   }
 
   loadHeroes() {
-    this.OpendotaService.getHeroes().subscribe(result => this.heroes = result );
+    this.OpendotaService.getHeroes().subscribe(result =>
+      {
+        this.heroes = result
+        this.loaded = true
+      }
+    );
   }
 
 }

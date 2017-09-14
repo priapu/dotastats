@@ -1,0 +1,14 @@
+.heroes-list .role {
+    margin-right: .2em;
+}
+.heroes-list label {
+    width: 10em;
+}
+.heroes-list-list {
+    list-style: none outside;
+    margin: 0;
+    padding: 0;
+}
+.heroes-list-list .hero-detail {
+    margin: 0 1em 0 0;
+}
