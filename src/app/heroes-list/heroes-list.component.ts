@@ -14,9 +14,6 @@ export class HeroesListComponent implements OnInit {
   loaded = false
 
   ngOnInit() {
-  }
-
-  loadHeroes() {
     this.OpendotaService.getHeroes().subscribe(result =>
       {
         this.heroes = result

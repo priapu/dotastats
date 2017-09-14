@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OpendotaService } from '../opendota.service';
 
 @Component({
   selector: 'app-myprofile',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyprofileComponent implements OnInit {
 
-  constructor() { }
+  profile = {}
+  loaded = false
+
+  constructor(private OpendotaService: OpendotaService) { }
 
   ngOnInit() {
+    this.OpendotaService.getProfile().subscribe(result =>
+      {
+        this.profile = result
+        this.loaded = true
+      }
+    );
   }
 
 }

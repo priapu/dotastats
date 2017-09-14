@@ -1,3 +1,7 @@
-<p>
-  myprofile works!
-</p>
+<h2>My profile</h2>
+<div *ngIf="loaded">
+  <img src="{{ profile.profile.avatar }}" alt="{{ profile.profile.personaname }}">
+  <div><label>Name</label> {{ profile.profile.personaname }}</div>
+  <div><label>Country</label> {{ profile.profile.loccountrycode }}</div>
+  <div><label>MMR estimate</label> {{ profile.mmr_estimate.estimate }}</div>
+</div>
