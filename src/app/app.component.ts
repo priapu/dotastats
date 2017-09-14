@@ -12,9 +12,4 @@ export class Hero {
 })
 
 export class AppComponent {
-  title = 'app number 1';
-  hero: Hero = {
-    id: 1,
-    name: "Hero number one"
-  };
 }
