@@ -1,0 +1,11 @@
+<button (click)="loadHeroes()">This loads the heroes from opendota API</button>
+<h2>List of heroes</h2>
+<ul>
+  <li *ngFor="let hero of heroes">
+    <h2 class="hero-name">{{ hero.localized_name }}</h2>
+    <div><label>attack type</label> {{ hero.attack_type }}</div>
+    <div><label>legs</label> {{ hero.legs }}</div>
+    <div><label>primary attr</label> {{ hero.primary_attr }}</div>
+    <div><label>roles</label> <span *ngFor="let role of hero.roles">role</span></div>
+  </li>
+</ul>
